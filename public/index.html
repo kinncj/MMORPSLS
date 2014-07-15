@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>Massively Multiplayer Online Rock Paper Scissors Lizard Spock</title>
+
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-route/angular-route.min.js"></script>
+
+    <script src="js/controllers/HomeController.js"></script>
+    <script src="js/controllers/GameController.js"></script>
+    <script src="js/services/GameService.js"></script>
+    <script src="js/controllers/RoomController.js"></script>
+    <script src="js/services/RoomService.js"></script>
+    <script src="js/appRoutes.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="game" ng-controller="HomeController">
+<div class="container">
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">MMORPSLS</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="/room">Room</a></li>
+            <li><a href="/game">Game</a></li>
+        </ul>
+    </nav>
+
+    <div ng-view></div>
+
+</div>
+</body>
+</html>
