@@ -1,5 +1,4 @@
 var express        = require('express');
-var connection     = require('connection');
 var compression    = require('compression');
 var app            = express();
 var bodyParser     = require('body-parser');
