@@ -1,4 +1,6 @@
 var express        = require('express');
+var connection     = require('connection');
+var compression    = require('compression');
 var app            = express();
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
@@ -11,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(methodOverride('X-HTTP-Method-Override'));
 
-app.use(connect.compress());
+app.use(compression());
 
 app.use(express.static(__dirname + '/public'));
 
