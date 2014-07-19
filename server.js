@@ -24,7 +24,7 @@ io.on('connection', function(socket){
     console.log('a user connected');
 
     socket.on('message', function(data){
-        socket.emit('message',data);
+        socket.broadcast.emit('message',data);
     })
 });
 
